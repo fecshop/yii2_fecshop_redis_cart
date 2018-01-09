@@ -2,5 +2,5 @@
 fecshop cart use redis storage
 
 ```
-composer require --prefer-dist fecshop/yii2_fecshop_redis_cart  
+composer require fancyecommerce/fecshop_redis_cart 
 ```
