@@ -8,28 +8,30 @@
 
 return [
     /**
-     * ÏÂÃæÊÇµÚÈý·½À©Õ¹¿â°üµÄÅäÖÃ·½Ê½
+     * ä¸‹é¢æ˜¯ç¬¬ä¸‰æ–¹æ‰©å±•åº“åŒ…çš„é…ç½®æ–¹å¼
      */
-    // Õâ¸öÊÇÀ©Õ¹extensionsµÄ×Ü¿ª¹Ø£¬true´ú±í´ò¿ª
+    // è¿™ä¸ªæ˜¯æ‰©å±•extensionsçš„æ€»å¼€å…³ï¼Œtrueä»£è¡¨æ‰“å¼€
     'enable' => true, 
-    // ¸÷¸öÈë¿ÚµÄÅäÖÃ
+    // å„ä¸ªå…¥å£çš„é…ç½®
     'app' => [
-        // 1.¹«ÓÃ²ã
+        // 1.å…¬ç”¨å±‚
         'common' => [
-            // ÔÚ¹«ÓÃ²ãµÄ¿ª¹Ø£¬ÉèÖÃ³Éfalseºó£¬¹«ÓÃ²ãµÄÅäÖÃ½«Ê§Ð§
+            // åœ¨å…¬ç”¨å±‚çš„å¼€å…³ï¼Œè®¾ç½®æˆfalseåŽï¼Œå…¬ç”¨å±‚çš„é…ç½®å°†å¤±æ•ˆ
             'enable' => true,
-            // ¹«ÓÃ²ãµÄ¾ßÌåÅäÖÃÏÂÔØÏÂÃæ
+            // å…¬ç”¨å±‚çš„å…·ä½“é…ç½®ä¸‹è½½ä¸‹é¢
             'config' => [
                 'services' => [
-                    'class' => 'fecshop\services\Cart',
-                    // ×Ó·þÎñ
-                    'childService' => [
-                        'quote' => [
-                            'class' => 'fecshop\services\cart\Quote',
-                        ],
-                        'quoteItem' => [
-                            'class' => 'fecshop\services\cart\QuoteItem',
-                        ],
+                    'cart' => [
+                        'class' => 'fecshop\rediscart\services\Cart',
+                        // å­æœåŠ¡
+                        'childService' => [
+                            'quote' => [
+                                'class' => 'fecshop\rediscart\services\cart\Quote',
+                            ],
+                            'quoteItem' => [
+                                'class' => 'fecshop\rediscart\services\cart\QuoteItem',
+                            ],
+                        ]
                     ]
                 ],
                 'modules' => [
