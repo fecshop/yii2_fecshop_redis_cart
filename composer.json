@@ -1,0 +1,38 @@
+{  
+      "name": "fecshop/yii2_fecshop_redis_cart",  
+      "description": "fecshop cart use redis storage ",  
+      "keywords": [  
+        "yii2",  
+        "fecshop",
+        "redis cart"
+      ],  
+      "homepage": "https://github.com/fecshop/yii2_fecshop_redis_cart",  
+      "type": "yii2-extension",  
+      "license": "BSD 3-Clause",  
+      "support": {  
+        "source": "https://github.com/fecshop/yii2_fecshop_redis_cart"  
+      },  
+      "authors": [  
+        {  
+          "name": "terry",  
+          "email": "2358269014@qq.com"  
+        }  
+      ],  
+      "minimum-stability": "stable",  
+      "require": {  
+        "php": ">=5.4.0",  
+        "fecshop/yii2_fecshop": "~1.2.2.8"  
+         
+      },  
+      "autoload": {  
+        "psr-4": {  
+          "fecshop\\rediscart\\": ""  
+        }  
+      },  
+      "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+      ]
+}
