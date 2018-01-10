@@ -7,7 +7,20 @@ Fecshop Redis Cart
 1.安装
 
 ```
-composer require fancyecommerce/fecshop_redis_cart 
+composer require --prefer-dist fancyecommerce/fecshop_redis_cart 
+```
+
+or 在根目录的`composer.json`中添加
+
+```
+"fancyecommerce/fecshop_redis_cart": "~1.0.6"
+
+```
+
+然后执行
+
+```
+composer update
 ```
 
 2.配置文件
