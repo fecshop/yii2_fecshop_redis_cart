@@ -13,7 +13,7 @@ composer require --prefer-dist fancyecommerce/fecshop_redis_cart
 or 在根目录的`composer.json`中添加
 
 ```
-"fancyecommerce/fecshop_redis_cart": "~1.0.7"
+"fancyecommerce/fecshop_redis_cart": "~1.0.8"
 
 ```
 
