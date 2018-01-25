@@ -1,10 +1,22 @@
-Fecshop Redis Cart
-======================
+<p>
+  <a href="http://fecshop.appfront.fancyecommerce.com/">
+    <img src="http://img.appfront.fancyecommerce.com/custom/logo.png">
+  </a>
+</p>
+<br/>
 
-> fecshop 购物车采用redis实现底层
+[![Latest Stable Version](https://poser.pugx.org/fancyecommerce/fecshop_redis_cart/v/stable)](https://packagist.org/packages/fancyecommerce/fecshop_redis_cart)
+[![Total Downloads](https://poser.pugx.org/fancyecommerce/fecshop_redis_cart/downloads)](https://packagist.org/packages/fancyecommerce/fecshop_redis_cart)
+[![Latest Unstable Version](https://poser.pugx.org/fancyecommerce/fecshop_redis_cart/v/unstable)](https://packagist.org/packages/fancyecommerce/fecshop_redis_cart)
+[![License](https://poser.pugx.org/fancyecommerce/fecshop_redis_cart/license)](https://packagist.org/packages/fancyecommerce/fecshop_redis_cart)
+
+Fecshop Redis购物车的实现
+
+> fecshop 采用redis实现底层, 存储用户的cart信息。
 
 
-1.安装
+安装
+-------
 
 ```
 composer require --prefer-dist fancyecommerce/fecshop_redis_cart 
@@ -23,28 +35,26 @@ or 在根目录的`composer.json`中添加
 composer update
 ```
 
+配置
+-----
+
+1.配置文件复制
+
+将`vendor\fancyecommerce/fecshop_redis_cart\config\fecshop_rediscart.php` 复制到
+`@common\config\fecshop_third_extensions\fecshop_rediscart.php`(需要创建该文件)
+
+该文件是扩展的配置文件，通过上面的操作，加入到fecshop的插件配置中
+
 2.redis配置
 
 Cart信息保存到磁盘，因此需要配置redis写入到磁盘，可以参看:
 [yii2 – redis 配置](http://www.fancyecommerce.com/2016/05/03/yii2-redis-%E9%85%8D%E7%BD%AE/)
-的
-`1.2 （可选操作）对于redis的磁盘存储` 部分。
+的 `1.2 （可选操作）对于redis的磁盘存储` 部分。
 
 3.配置文件
 
-> 安装完成后，需要将配置文件复制到fecshop的第三方扩展文件夹中
 
-3.1、将文件 `vendor\fancyecommerce/fecshop_redis_cart\config\fecshop_rediscart.php`
-复制到 `@common\config\fecshop_third_extensions\` 文件夹下面
-
-3.2、该扩展默认是开启的，如果想关掉配置，可以将
-`@common\config\fecshop_third_extensions\fecshop_rediscart.php`的`enable`
-设置成`false`
-
-
-
-4.然后，cart信息就存储到redis里面了。
-该扩展安装在路径 `vendor/fancyecommerce/fecshop_redis_cart`下
+4.然后，cart信息就存储到redis里面了，该扩展安装在路径 `vendor/fancyecommerce/fecshop_redis_cart`下
 
 
 
