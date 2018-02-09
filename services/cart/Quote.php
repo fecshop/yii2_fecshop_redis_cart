@@ -75,9 +75,9 @@ class Quote extends \fecshop\services\cart\Quote
         }
         $myCart->remote_ip  = \fec\helpers\CFunc::get_real_ip();
         $myCart->app_name   = Yii::$service->helper->getAppName();
-        if ($defaultShippingMethod = Yii::$service->shipping->getDefaultShippingMethod()) {
-            $myCart->shipping_method = $defaultShippingMethod;
-        }
+        //if ($defaultShippingMethod = Yii::$service->shipping->getDefaultShippingMethod()) {
+        //    $myCart->shipping_method = $defaultShippingMethod;
+        //}
         $myCart->save();
         $cart_id = $myCart['cart_id'];
         $this->setCartId($cart_id);
