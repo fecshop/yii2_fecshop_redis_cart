@@ -55,12 +55,14 @@ class QuoteItem extends \fecshop\services\cart\QuoteItem
         }
         $item_one = $this->_itemModel->find()->where($where)->one();
         if ($item_one['cart_id']) {
+            $item_one->active       = $this->itemDefaultActiveStatus;
             $item_one->qty = (int)$item['qty'] + (int)$item_one['qty'];
             $item_one->save();
             // 重新计算购物车的数量
             Yii::$service->cart->quote->computeCartInfo();
         } else {
             $item_one = new $this->_itemModelName;
+            $item_one->active       = $this->itemDefaultActiveStatus;
             $item_one->store        = Yii::$service->store->currentStore;
             $item_one->cart_id      = $cart_id;
             $item_one->created_at   = time();

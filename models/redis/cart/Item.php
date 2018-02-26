@@ -27,6 +27,7 @@ class Item extends ActiveRecord
             'updated_at',
             'product_id',
             'qty',
+            'active',
             'custom_option_sku',
         ];
     }
