@@ -29,6 +29,7 @@ class QuoteItem extends \fecshop\services\cart\QuoteItem
      *		'product_id' 		=> 22222,
      *		'custom_option_sku' => red-xxl,
      *		'qty' 				=> 22,
+     *      'sku' 				=> 'xxxx',
      * ];
      * 将某个产品加入到购物车中。在添加到cart_item表后，更新
      * 购物车中产品的总数。
@@ -74,6 +75,8 @@ class QuoteItem extends \fecshop\services\cart\QuoteItem
             // 重新计算购物车的数量,并写入sales_flat_cart表存储
             Yii::$service->cart->quote->computeCartInfo();
         }
+        $item['afterAddQty'] = $item_one->qty;
+        $this->sendTraceAddToCartInfoByApi($item);
     }
     
 }
