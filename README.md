@@ -29,6 +29,16 @@ or 在根目录的`composer.json`中添加
 
 ```
 
+**注意版本号**: 
+
+fecshop-1.7.1.0以上版本请使用yii2_fecshop_redis_cart-1.2.0以上的版本
+
+fecshop-1.7.0.0以下的版本请使用yii2_fecshop_redis_cart-1.1.0
+
+版本查看：https://github.com/fecshop/yii2_fecshop_redis_cart/releases
+
+https://github.com/fecshop/yii2_fecshop_redis_cart/releases
+
 然后执行
 
 ```
