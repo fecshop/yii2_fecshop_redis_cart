@@ -25,6 +25,7 @@ class Cart extends ActiveRecord
             'created_at', 
             'updated_at',
             'items_count',
+            'items_all_count',
             'customer_id',
             'customer_email',
             'customer_firstname',
